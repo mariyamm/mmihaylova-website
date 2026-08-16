@@ -1,0 +1,9 @@
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Generated 0ms","label":"types","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":" astro  v7.1.4 ready in 613 ms\n┃ Local    http://localhost:4321/\n┃ Network  http://30.30.30.199:4321/","label":"SKIP_FORMAT","level":"info"}
+{"message":"watching for file changes...","label":null,"level":"info"}
+{"message":"[200] / 16ms","label":null,"level":"info"}
+{"message":"[200] /expertise 6ms","label":null,"level":"info"}
+{"message":"[200] /projects 7ms","label":null,"level":"info"}
+{"message":"[200] /about 6ms","label":null,"level":"info"}
