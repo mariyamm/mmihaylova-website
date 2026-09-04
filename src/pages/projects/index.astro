@@ -180,11 +180,7 @@ const processSteps = [
           <a href="/about">About</a>
           <a href="/contact">Contact</a>
 
-          <div class="language-switcher" aria-label="Language selector">
-            <a href="/" class="active-language">EN</a>
-            <span>|</span>
-            <a href="/fr">FR</a>
-          </div>
+
         </div>
       </nav>
     </header>
@@ -219,53 +215,11 @@ const processSteps = [
           </div>
 
           <div class="hero-visual">
-            <div class="hero-dash-card">
-              <p class="hero-dash-title">Overview</p>
-
-              <div class="hero-dash-stats">
-                <div class="hero-dash-stat">
-                  <p>12,842</p>
-                  <span>Conversations</span>
-                </div>
-                <div class="hero-dash-stat">
-                  <p>92%</p>
-                  <span>Resolution</span>
-                </div>
-                <div class="hero-dash-stat">
-                  <p>1m 32s</p>
-                  <span>Response</span>
-                </div>
-              </div>
-
-              <svg
-                viewBox="0 0 200 50"
-                class="hero-dash-chart"
-                preserveAspectRatio="none"
-              >
-                <polyline
-                  points="0,38 20,34 40,36 60,25 80,30 100,15 120,22 140,10 160,18 180,8 200,14"
-                  fill="none"
-                  stroke="#45c7ff"
-                  stroke-width="2"
-                />
-              </svg>
-            </div>
-
-            <div class="hero-floating-card hero-floating-top">
-              <span class="hero-floating-icon" set:html={icons.sparkle} />
-              <div>
-                <p class="hero-floating-title">AI Copilot</p>
-                <p class="hero-floating-subtitle">automation running</p>
-              </div>
-            </div>
-
-            <div class="hero-floating-card hero-floating-bottom">
-              <span class="hero-floating-icon" set:html={icons.chat} />
-              <div>
-                <p class="hero-floating-title">How can I help?</p>
-                <p class="hero-floating-subtitle">3 workflows active</p>
-              </div>
-            </div>
+            <img
+              src="/images/projects_hero.png"
+              alt="Project portfolio illustration"
+              class="projects-hero-image"
+            />
           </div>
         </div>
       </section>
@@ -303,79 +257,11 @@ const processSteps = [
       <section class="featured-project">
         <div class="featured-project-inner">
           <div class="dash-mock">
-            <div class="dash-sidebar">
-              <p class="dash-sidebar-title">AI Support Copilot</p>
-              <div class="dash-sidebar-nav">
-                <span class="dash-sidebar-item active">Overview</span>
-                <span class="dash-sidebar-item">Conversations</span>
-                <span class="dash-sidebar-item">Analytics</span>
-                <span class="dash-sidebar-item">Knowledge</span>
-                <span class="dash-sidebar-item">Integrations</span>
-                <span class="dash-sidebar-item">Settings</span>
-              </div>
-            </div>
-
-            <div class="dash-main">
-              <p class="dash-main-title">Overview</p>
-
-              <div class="dash-stats-row">
-                <div class="dash-stat">
-                  <p class="dash-stat-value">
-                    12,842 <span class="dash-stat-delta up">+18%</span>
-                  </p>
-                  <p class="dash-stat-label">Total conversations</p>
-                </div>
-                <div class="dash-stat">
-                  <p class="dash-stat-value">
-                    92% <span class="dash-stat-delta up">+5%</span>
-                  </p>
-                  <p class="dash-stat-label">Resolution rate</p>
-                </div>
-                <div class="dash-stat">
-                  <p class="dash-stat-value">
-                    1m 32s <span class="dash-stat-delta down">-21%</span>
-                  </p>
-                  <p class="dash-stat-label">Avg. response time</p>
-                </div>
-              </div>
-
-              <div class="dash-panels-row">
-                <div class="dash-chart-panel">
-                  <p class="dash-panel-label">Conversations over time</p>
-                  <svg
-                    viewBox="0 0 200 60"
-                    class="dash-chart-svg"
-                    preserveAspectRatio="none"
-                  >
-                    <polyline
-                      points="0,45 20,40 40,42 60,30 80,35 100,20 120,28 140,15 160,22 180,10 200,18"
-                      fill="none"
-                      stroke="#45c7ff"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-
-                <div class="dash-list-panel">
-                  <p class="dash-panel-label">Top intents</p>
-                  <div class="dash-list-row">
-                    <span>Order tracking</span><span>30%</span>
-                  </div>
-                  <div class="dash-list-row">
-                    <span>Returns & refunds</span><span>22%</span>
-                  </div>
-                  <div class="dash-list-row">
-                    <span>Product information</span><span>18%</span>
-                  </div>
-                  <div class="dash-list-row">
-                    <span>Shipping</span><span>15%</span>
-                  </div>
-                  <div class="dash-list-row">
-                    <span>Account & billing</span><span>10%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <img
+              src="/images/project1.png"
+              alt="AI Support Copilot dashboard thumbnail"
+              class="featured-project-image"
+            />
           </div>
 
           <div class="featured-project-copy">
@@ -591,17 +477,7 @@ const processSteps = [
           </p>
         </div>
 
-        <div class="footer-column">
-          <p class="footer-heading">Languages</p>
-          <p class="footer-note">
-            This website is available in English / Français.
-          </p>
-          <div class="footer-lang-links">
-            <a href="/" class="active-language">EN</a>
-            <span>|</span>
-            <a href="/fr">FR</a>
-          </div>
-        </div>
+
       </div>
 
       <div class="footer-bottom">
@@ -1090,12 +966,19 @@ const processSteps = [
   }
 
   .dash-mock {
-    display: grid;
-    grid-template-columns: 130px 1fr;
+    display: block;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     background: #0b1f3d;
     overflow: hidden;
+    min-height: 420px;
+  }
+
+  .featured-project-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .dash-sidebar {

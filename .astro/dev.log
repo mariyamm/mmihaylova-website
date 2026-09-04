@@ -1,9 +1,52 @@
 {"message":"connected.","label":"vite","level":"info"}
-{"message":"Generated 0ms","label":"types","level":"info"}
+{"message":"Generated 1ms","label":"types","level":"info"}
 {"message":"connected.","label":"vite","level":"info"}
-{"message":" astro  v7.1.4 ready in 613 ms\n┃ Local    http://localhost:4321/\n┃ Network  http://30.30.30.199:4321/","label":"SKIP_FORMAT","level":"info"}
+{"message":"Re-optimizing dependencies because vite config has changed","label":"vite","level":"info"}
+{"message":" astro  v7.1.4 ready in 657 ms\n┃ Local    http://localhost:4321/\n┃ Network  http://192.168.110.30:4321/","label":"SKIP_FORMAT","level":"info"}
 {"message":"watching for file changes...","label":null,"level":"info"}
-{"message":"[200] / 16ms","label":null,"level":"info"}
+{"message":"\n update  ▶ New version of Astro available: 7.3.1\n  Run npx @astrojs/upgrade to update\n","label":"SKIP_FORMAT","level":"warn"}
+{"message":"[200] / 19ms","label":null,"level":"info"}
 {"message":"[200] /expertise 6ms","label":null,"level":"info"}
+{"message":"[200] /contact 5ms","label":null,"level":"info"}
 {"message":"[200] /projects 7ms","label":null,"level":"info"}
-{"message":"[200] /about 6ms","label":null,"level":"info"}
+{"message":"[200] /projects/ai-support-copilot 6ms","label":null,"level":"info"}
+{"message":"/src/pages/index.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"/src/pages/expertise.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"src/pages/contact.astro","label":"watch","level":"info"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"/src/pages/projects/ai-support-copilot.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"[200] /projects 7ms","label":null,"level":"info"}
+{"message":"[200] / 7ms","label":null,"level":"info"}
+{"message":"[200] /contact 6ms","label":null,"level":"info"}
+{"message":"src/pages/contact.astro","label":"watch","level":"info"}
+{"message":"[200] /contact 5ms","label":null,"level":"info"}
+{"message":"[200] /projects 1ms","label":null,"level":"info"}
+{"message":"src/pages/contact.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 10ms","label":null,"level":"info"}
+{"message":"/src/pages/projects/ai-support-copilot.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"[200] /projects 4ms","label":null,"level":"info"}
+{"message":"/src/pages/index.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"/src/pages/expertise.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"src/pages/contact.astro","label":"watch","level":"info"}
+{"message":"/src/pages/projects/ai-support-copilot.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 6ms","label":null,"level":"info"}
+{"message":"/src/pages/projects/ai-support-copilot.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 6ms","label":null,"level":"info"}
+{"message":"[404] /images/ChatGPT Image Sep 4%2C 2026 at 04_46_59 PM.png 9ms","label":null,"level":"info"}
+{"message":"[404] /images/ChatGPT Image Sep 4%2C 2026 at 04_46_59 PM.png 0ms","label":null,"level":"info"}
+{"message":"[404] /images/ChatGPT Image Sep 4%2C 2026 at 04_46_59 PM.png 0ms","label":null,"level":"info"}
+{"message":"/src/pages/projects/ai-support-copilot.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 8ms","label":null,"level":"info"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 6ms","label":null,"level":"info"}
+{"message":"[404] /images/ChatGPT Image Sep 4%2C 2026 at 04_46_59 PM.png 0ms","label":null,"level":"info"}
+{"message":"[404] /images/ChatGPT Image Sep 4%2C 2026 at 04_46_59 PM.png 0ms","label":null,"level":"info"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 5ms","label":null,"level":"info"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 7ms","label":null,"level":"info"}
