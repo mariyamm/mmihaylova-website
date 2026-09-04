@@ -50,3 +50,13 @@
 {"message":"[200] /projects 5ms","label":null,"level":"info"}
 {"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
 {"message":"[200] /projects 7ms","label":null,"level":"info"}
+{"message":"src/pages/contact.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"src/pages/contact.astro","label":"watch","level":"info"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 6ms","label":null,"level":"info"}
+{"message":"/src/pages/index.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"/src/pages/projects/ai-support-copilot.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"/src/pages/expertise.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"[200] /projects 6ms","label":null,"level":"info"}
