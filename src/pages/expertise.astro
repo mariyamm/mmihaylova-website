@@ -258,6 +258,7 @@ function renderHighlighted(text: string) {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <meta
       name="viewport"
@@ -1526,6 +1527,18 @@ function renderHighlighted(text: string) {
     .footer-bottom {
       flex-direction: column;
       align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .expertise-hero-visual {
+      overflow: hidden;
+    }
+
+    .expertise-hero-image {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
     }
   }
 </style>

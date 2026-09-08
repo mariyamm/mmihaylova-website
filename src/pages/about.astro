@@ -186,6 +186,7 @@ const approachSteps = [
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <meta
       name="viewport"
@@ -1476,6 +1477,21 @@ const approachSteps = [
       width: min(100% - 30px, 1180px);
     }
 
+    .about-hero-inner {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .about-hero-inner > * {
+      min-width: 0;
+    }
+
+    .about-hero-visual,
+    .about-hero-visual img {
+      width: 100%;
+      max-width: 100%;
+    }
+
     .buttons {
       flex-direction: column;
     }
@@ -1502,6 +1518,17 @@ const approachSteps = [
     .footer-bottom {
       flex-direction: column;
       align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about-hero-copy,
+    .about-hero-copy h1,
+    .about-hero-copy .description,
+    .about-hero-copy .buttons {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
     }
   }
 </style>
