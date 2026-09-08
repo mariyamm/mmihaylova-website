@@ -1,4 +1,6 @@
 ---
+import SiteHeader from "../../components/SiteHeader.astro";
+
 const pageTitle = "Projects | Mariya Mihaylova";
 
 const icons = {
@@ -125,25 +127,43 @@ const processSteps = [
     number: 1,
     title: "Discover",
     description:
-      "Understand your goals, challenges and data to define the right problem.",
+      "Build a shared picture of your current situation, goals, constraints and opportunities.",
+    deliverable: "Current-state assessment",
   },
   {
     number: 2,
-    title: "Design",
+    title: "Prioritize & Plan",
     description:
-      "Co-create the solution approach, architecture and success metrics.",
+      "Evaluate the highest-value opportunities and agree on what to do first, why and when.",
+    deliverable: "Prioritized roadmap and project scope",
   },
   {
     number: 3,
-    title: "Build",
+    title: "Design the Solution",
     description:
-      "Develop, integrate and test with agility and quality built-in.",
+      "Explore options and turn the right approach into a practical written plan before building.",
+    deliverable: "Solution brief and delivery plan",
   },
   {
     number: 4,
-    title: "Deliver & scale",
+    title: "Build & Manage",
     description:
-      "Launch, measure impact and continuously optimize for long-term value.",
+      "Deliver the product with clear ownership, quality controls and transparent progress management.",
+    deliverable: "Working product or implementation",
+  },
+  {
+    number: 5,
+    title: "Educate & Integrate",
+    description:
+      "Prepare your team to adopt the solution confidently and embed it into day-to-day work.",
+    deliverable: "Training and integration materials",
+  },
+  {
+    number: 6,
+    title: "Maintain & Scale",
+    description:
+      "Support, optimize and extend the solution as your needs evolve and evidence guides the next step.",
+    deliverable: "Tailored ongoing support plan",
   },
 ];
 ---
@@ -167,23 +187,7 @@ const processSteps = [
   </head>
 
   <body>
-    <header>
-      <nav>
-        <a href="/" class="logo" aria-label="Mariya Mihaylova homepage">
-          MM
-        </a>
-
-        <div class="navigation">
-          <a href="/">Home</a>
-          <a href="/expertise">Expertise</a>
-          <a href="/projects" class="active-page">Projects</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
-
-
-        </div>
-      </nav>
-    </header>
+    <SiteHeader active="projects" />
 
     <main>
       <section class="projects-hero">
@@ -398,6 +402,11 @@ const processSteps = [
           <p class="section-label">From Idea to Impact</p>
           <h2>How I approach every project</h2>
 
+          <p class="process-intro">
+            Each stage creates a clear deliverable and decision point, so you can
+            engage only where you need support and move forward with confidence.
+          </p>
+
           <div class="process-row">
             {
               processSteps.map((step) => (
@@ -406,6 +415,9 @@ const processSteps = [
                   <p class="process-step-title">{step.title}</p>
                   <p class="process-step-description">
                     {step.description}
+                  </p>
+                  <p class="process-step-deliverable">
+                    <span>Deliverable</span> {step.deliverable}
                   </p>
                 </div>
               ))
@@ -1385,9 +1397,18 @@ const processSteps = [
     text-align: center;
   }
 
+  .process-intro {
+    max-width: 680px;
+    margin: 18px auto 0;
+    color: rgba(245, 247, 250, 0.68);
+    font-size: 16px;
+    line-height: 1.65;
+    text-align: center;
+  }
+
   .process-row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 18px;
     margin: 36px 0 36px;
   }
@@ -1399,21 +1420,6 @@ const processSteps = [
     background: rgba(255, 255, 255, 0.03);
     padding: 24px 18px;
     text-align: center;
-  }
-
-  .process-step:not(:last-child)::after {
-    position: absolute;
-    top: 24px;
-    right: -22px;
-    width: 26px;
-    height: 1px;
-    background-image: linear-gradient(
-      to right,
-      rgba(69, 199, 255, 0.5) 50%,
-      transparent 50%
-    );
-    background-size: 8px 1px;
-    content: "";
   }
 
   .process-step-number {
@@ -1441,6 +1447,24 @@ const processSteps = [
     color: rgba(245, 247, 250, 0.5);
     font-size: 12.5px;
     line-height: 1.55;
+  }
+
+  .process-step-deliverable {
+    margin: 14px 0 0;
+    color: #ffffff;
+    font-size: 12.5px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .process-step-deliverable span {
+    display: block;
+    margin-bottom: 3px;
+    color: #45c7ff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   /* ---------- CTA ---------- */

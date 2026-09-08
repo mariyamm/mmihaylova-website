@@ -1,4 +1,6 @@
 ---
+import SiteHeader from "../../components/SiteHeader.astro";
+
 const pageTitle = "E-commerce Intelligence Dashboard | Mariya Mihaylova";
 
 const icons = {
@@ -47,23 +49,7 @@ const icons = {
   </head>
 
   <body>
-    <header>
-      <nav>
-        <a href="/" class="logo" aria-label="Mariya Mihaylova homepage">
-          MM
-        </a>
-
-        <div class="navigation">
-          <a href="/">Home</a>
-          <a href="/expertise">Expertise</a>
-          <a href="/projects" class="active-page">Projects</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
-
-
-        </div>
-      </nav>
-    </header>
+    <SiteHeader active="projects" />
 
     <main class="case-study-page">
       <section class="hero">

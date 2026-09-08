@@ -1,4 +1,6 @@
 ---
+import SiteHeader from "../components/SiteHeader.astro";
+
 const pageTitle = "Mariya Mihaylova | AI Transformation Consultant";
 
 const companies = [
@@ -171,28 +173,48 @@ const processSteps = [
     number: "1",
     title: "Discover",
     description:
-      "Understand your business, challenges and opportunities through deep collaboration.",
+      "Build a shared picture of your current situation, goals, constraints and opportunities.",
+    deliverable: "Current-state assessment",
     icon: icons.search,
   },
   {
     number: "2",
-    title: "Prioritize",
+    title: "Prioritize & Plan",
     description:
-      "Define the right problems to solve and build a clear roadmap for impact.",
+      "Evaluate the highest-value opportunities and agree on what to do first, why and when.",
+    deliverable: "Prioritized roadmap and project scope",
     icon: icons.list,
   },
   {
     number: "3",
-    title: "Build",
+    title: "Design the Solution",
     description:
-      "Design and implement solutions with agility, quality and transparency.",
-    icon: icons.rocket,
+      "Explore options and turn the right approach into a practical written plan before building.",
+    deliverable: "Solution brief and delivery plan",
+    icon: icons.workflow,
   },
   {
     number: "4",
-    title: "Scale",
+    title: "Build & Manage",
     description:
-      "Measure outcomes, optimize and scale solutions across your organization.",
+      "Deliver the product with clear ownership, quality controls and transparent progress management.",
+    deliverable: "Working product or implementation",
+    icon: icons.rocket,
+  },
+  {
+    number: "5",
+    title: "Educate & Integrate",
+    description:
+      "Prepare your team to adopt the solution confidently and embed it into day-to-day work.",
+    deliverable: "Training and integration materials",
+    icon: icons.checklist,
+  },
+  {
+    number: "6",
+    title: "Maintain & Scale",
+    description:
+      "Support, optimize and extend the solution as your needs evolve and evidence guides the next step.",
+    deliverable: "Tailored ongoing support plan",
     icon: icons.trendUp,
   },
 ];
@@ -279,23 +301,7 @@ const tools = [
   </head>
 
   <body>
-    <header>
-      <nav>
-        <a href="/" class="logo" aria-label="Mariya Mihaylova homepage">
-          MM
-        </a>
-
-        <div class="navigation">
-          <a href="/" class="active-page">Home</a>
-          <a href="/expertise">Expertise</a>
-          <a href="/projects">Projects</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
-
-
-        </div>
-      </nav>
-    </header>
+    <SiteHeader active="home" />
 
     <main>
       <section class="hero">
@@ -502,7 +508,12 @@ const tools = [
         <div class="process-inner">
           <p class="section-label">How I Work</p>
 
-          <h2>A structured approach to meaningful results</h2>
+          <h2>Six flexible stages, designed to reduce risk</h2>
+
+          <p class="process-intro">
+            Each stage creates a clear deliverable and decision point, so you can
+            engage only where you need support and move forward with confidence.
+          </p>
 
           <div class="process-grid">
             {
@@ -513,6 +524,9 @@ const tools = [
                   <p class="process-step-title">{step.title}</p>
                   <p class="process-step-description">
                     {step.description}
+                  </p>
+                  <p class="process-step-deliverable">
+                    <span>Deliverable</span> {step.deliverable}
                   </p>
                 </div>
               ))
@@ -744,6 +758,10 @@ const tools = [
   .navigation > a:hover::after {
     opacity: 1;
     transform: scaleX(1);
+  }
+
+  .mobile-menu {
+    display: none;
   }
 
   .language-switcher {
@@ -1121,6 +1139,85 @@ const tools = [
 
     .navigation > a {
       display: none;
+    }
+
+    .mobile-menu {
+      position: static;
+      display: block;
+    }
+
+    .mobile-menu summary {
+      position: relative;
+      z-index: 32;
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-content: center;
+      gap: 5px;
+      border: 1px solid rgba(245, 247, 250, 0.26);
+      border-radius: 4px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .mobile-menu[open]::before {
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      background: rgba(3, 12, 24, 0.58);
+      content: "";
+    }
+
+    .mobile-menu summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .mobile-menu summary span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: #f5f7fa;
+      transition: transform 180ms ease, opacity 180ms ease;
+    }
+
+    .mobile-menu[open] summary span:first-child {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .mobile-menu[open] summary span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-menu[open] summary span:last-child {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .mobile-menu-panel {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      display: grid;
+      z-index: 31;
+      width: min(86vw, 340px);
+      align-content: start;
+      padding: 108px 22px 24px;
+      border-left: 1px solid rgba(245, 247, 250, 0.15);
+      background: #0b1c31;
+      box-shadow: -16px 0 34px rgba(0, 0, 0, 0.32);
+    }
+
+    .mobile-menu-panel a {
+      padding: 14px 12px;
+      color: rgba(245, 247, 250, 0.78);
+      font-size: 15px;
+      text-decoration: none;
+    }
+
+    .mobile-menu-panel a:hover,
+    .mobile-menu-panel a.active-page {
+      color: #ffffff;
+      background: rgba(69, 199, 255, 0.12);
     }
 
     .hero {
@@ -1520,7 +1617,7 @@ const tools = [
 
   .process-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 26px;
     margin-top: 46px;
   }
@@ -1559,6 +1656,32 @@ const tools = [
     color: rgba(245, 247, 250, 0.6);
     font-size: 14px;
     line-height: 1.6;
+  }
+
+  .process-intro {
+    max-width: 680px;
+    margin: 18px 0 0;
+    color: rgba(245, 247, 250, 0.68);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .process-step-deliverable {
+    margin: 16px 0 0;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .process-step-deliverable span {
+    display: block;
+    margin-bottom: 3px;
+    color: #45c7ff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   /* ---------- Experience ---------- */
@@ -1940,6 +2063,63 @@ const tools = [
     .footer-bottom {
       flex-direction: column;
       align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .process {
+      padding: 64px 0;
+    }
+
+    .process-inner {
+      width: min(100% - 32px, 1180px);
+    }
+
+    .process h2 {
+      font-size: 30px;
+      line-height: 1.15;
+    }
+
+    .process-intro {
+      margin-top: 14px;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .process-grid {
+      gap: 0;
+      margin-top: 34px;
+    }
+
+    .process-step {
+      padding: 0 0 28px;
+    }
+
+    .process-step + .process-step {
+      padding-top: 28px;
+      border-top: 1px solid rgba(245, 247, 250, 0.14);
+    }
+
+    .process-step-number {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 13px;
+      font-size: 13px;
+    }
+
+    .process-step-title {
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
+
+    .process-step-description {
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+
+    .process-step-deliverable {
+      margin-top: 12px;
+      font-size: 12.5px;
     }
   }
 </style>
