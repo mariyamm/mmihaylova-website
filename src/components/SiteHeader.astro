@@ -14,6 +14,14 @@ const links = [
 ] as const;
 ---
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6Z0XWNK443"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6Z0XWNK443');
+</script>
+
 <header class={active === "home" ? "is-home" : undefined}>
   <nav>
     <a href="/" class="logo" aria-label="Mariya Mihaylova homepage">MM</a>
@@ -47,11 +55,15 @@ const links = [
 
 <style>
   header {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 20;
     width: 100%;
+  }
+
+  header.is-home {
+    position: absolute;
   }
 
   nav {
@@ -95,14 +107,6 @@ const links = [
   }
 
   @media (max-width: 760px) {
-    header {
-      position: relative;
-    }
-
-    header.is-home {
-      position: absolute;
-    }
-
     nav {
       width: min(100% - 30px, 1180px);
     }
